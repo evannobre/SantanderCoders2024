@@ -1,0 +1,229 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family:'Segoe UI';
+    display: flex;
+    flex-direction: column;
+    color: #2c2c2c;
+    scroll-behavior: smooth;
+}
+
+#top-navbar {
+    position: fixed; 
+    overflow: hidden;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+#top-navbar ul {
+    margin: 0;
+}
+
+#top-navbar li {
+    display: inline-block;
+    font-size: 14pt;
+    margin: 0;
+    padding: 0;
+}
+
+#top-navbar a {
+    color: #2c2c2c;
+    text-decoration: none;
+    padding: 0 30px;
+}
+
+#top-navbar a:hover {
+    color: #3d9dff;
+    font-style: oblique;
+}
+
+#pic-container {
+    text-align: center;
+    padding: 160px 80px;
+}
+
+#name {
+    font-size: 20pt;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+#bachelor {
+    font-style: oblique;
+    font-size: 18pt;
+    margin-top: 3pt;
+}
+
+#main-pic { 
+    width: 20%;
+    border-radius: 50%;
+}
+
+footer {
+    padding: 100px 0 30px 0;
+    font-size: 10pt;
+    text-align: center;
+    font-style: oblique;
+}
+
+#aboutme {
+    text-align: justify;
+    font-size: 16pt;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+#technical-soft-skills {
+    padding: 0 80px 50px 80px; /*Ajustar*/
+}
+
+#technical-soft-skills .column {
+    float: left;
+    width: 33.33%;
+}
+
+.column p {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0;
+}
+
+.column ul {
+    width: 80%;
+    margin: 3pt 0 0 0;
+}
+.column li {
+    list-style: disc;
+    font-size: 16pt;
+    text-align: justify;
+}
+
+.degree {
+    font-weight: bold;
+}
+
+.uni {
+    font-style: oblique;
+}
+
+#education ul {
+    padding: 0;
+}
+
+#education li {
+    font-size: 16pt;
+    text-align: justify;
+    list-style: none;
+}
+
+#professional, #education, #contact, #aboutme {
+    padding: 40px 80px;
+}
+
+.table-image {
+    margin: auto;
+    display: flex;
+    width: 10%;
+    padding: 10px 0;
+}
+
+.aligned {
+    text-align: center;
+}
+
+.padding-table {
+    padding-left: 50px;
+}
+
+#KIS, #FCPC, #THALES, #mcdo  {
+    padding: 50px 0 0 0;
+}
+
+#dream-companies {
+    text-align: center;
+    padding: 30px 0 0 0;
+}
+
+#dream-companies ol {
+    font-size: 16pt;
+    list-style-position: inside;
+    margin: 3pt 0 0 0;
+}
+
+#dream-companies p {
+    font-size: 18pt;
+    font-weight: bold;
+    margin: 0;
+}
+
+form {
+    display: inline-block;
+    padding: 20px;
+    width: 100%;
+    border: 1.5px solid #999;
+    border-radius: 10px;
+}
+
+form input, label, textarea {
+    margin-top: 20px;
+}
+
+label {
+    display: inline-block;
+    font-size: 16px;
+    min-width: 80px;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 20px 0 20px;
+}
+
+input, textarea {
+    width: 80%;
+    border: 0.5px solid #999;
+    border-radius: 2px;
+    vertical-align: middle;
+    height: 30px;
+    outline-style: none;
+}
+
+button {
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    border-width: 0;
+    color: white;
+    padding: 10px 10px;
+}
+
+button:hover {
+    background-color: white;
+    color: #2c2c2c;
+}
+
+#fname::placeholder, #email::placeholder, #msg::placeholder {
+    font-size: 10px;
+    font-style: oblique;
+    color: #ccc;
+    padding: 0 0 0 10px;
+}
+
+#send-button {
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+#social-medias {
+    display: flex;
+    justify-content: center;
+}
+
+#social-medias img {
+    width: 60%;
+    padding-bottom: 15px;
+}
