@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua lista inteligente</title>
+    <link rel="icon" type="image/x-icon" href="/images/grocery-cart.png">
+</head>
+<body>
+    <h1>Lista de Supermercado</h1>
+
+    <form id="supermarketForm">
+        <label for="produto">Item:</label>
+        <input type="text" id="produto" name="produto" required>
+
+        <label for="quantidade">Quantidade:</label>
+        <input type="text" id="quantidade" name="quantidade" required>
+
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria" required>
+            <option>Café da Manhã e Padaria</option>
+            <option>Mercearia e Enlatados</option>
+            <option selected>Bebidas</option>
+            <option>Proteínas</option>
+            <option>Frios</option>
+            <option>Produtos de Limpeza</option>
+            <option>Utilidades</option>
+            <option>Higiene Pessoal</option>
+            <option>Frutas e Legumes</option>
+            <option>Pet</option>
+        </select>
+
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <h2>Tarefas</h2>
+    <table id="supermarketTable" border="1">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantidade</th>
+                <th>Categoria</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As tarefas serão inseridas aqui -->
+        </tbody>
+    </table>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
