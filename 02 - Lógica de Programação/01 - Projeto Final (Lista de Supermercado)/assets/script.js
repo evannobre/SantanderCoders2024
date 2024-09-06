@@ -62,4 +62,17 @@ document
     document.getElementById("supermarketForm").reset();
 
     console.log({ produtos });
+
+
+
+    // Atribuindo funcionalidade ao botão deletar
+    function deletar() {
+      deleteCell.addEventListener('click', function(deletar) {
+        deletar = console.log('Botão funcionando')
+      })
+    }
+    
+    deletar()
   });
+
+
