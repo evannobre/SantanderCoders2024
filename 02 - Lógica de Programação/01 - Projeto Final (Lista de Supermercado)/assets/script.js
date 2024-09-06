@@ -63,3 +63,21 @@ document
 
     console.log({ produtos });
   });
+
+  // Buscar produto
+  document
+  .getElementById("searchForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); 
+    const searchId = parseInt(document.getElementById("searchId").value); // Obtém o ID digitado pelo usuário
+    const foundProduct = produtos.find(produto => produto.id === searchId); // Procura o produto na lista
+
+    if (foundProduct) {
+      // Se o produto for encontrado, mostra os detalhes dele
+      document.getElementById("searchResult").textContent = 
+        `Produto: ${foundProduct.produto}, Quantidade: ${foundProduct.quantidade}, Categoria: ${foundProduct.categoria}`;
+    } else {
+      // Se não encontrar, mostra uma mensagem de erro
+      document.getElementById("searchResult").textContent = "Produto não encontrado!";
+    }
+  });
