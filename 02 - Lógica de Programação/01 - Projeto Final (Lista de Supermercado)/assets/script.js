@@ -1,5 +1,39 @@
 let produtos = [];
 let counter = 0;
+let linhaIndex, tabela = document.getElementById("supermarketTable");
+
+function transferirLinhaSelecionada() {
+  for(let i = 1; i < tabela.rows.length; i++) {
+      tabela.rows[i].onclick = function() {
+          linhaIndex = this.rowIndex;
+          document.getElementById("produto").value = this.cells[1].innerHTML;
+          document.getElementById("quantidade").value = this.cells[2].innerHTML;
+          document.getElementById("categoria").value = this.cells[3].innerHTML;
+      };
+  }
+}
+
+function editarLinhaSelecionada(id) {
+  const produto = document.getElementById("produto").value,
+        quantidade = document.getElementById("quantidade").value,
+        categoria = document.getElementById("categoria").value;
+
+  tabela.rows[linhaIndex].cells[1].innerHTML = produto;
+  tabela.rows[linhaIndex].cells[2].innerHTML = quantidade;
+  tabela.rows[linhaIndex].cells[3].innerHTML = categoria;
+
+  for (const obj of produtos) {
+    if (obj.id === id) {
+      obj.produto = produto;
+      obj.quantidade = quantidade;
+      obj.categoria = categoria
+
+      break;
+    }
+  }
+
+  console.log({ produtos });
+}
 
 // Função para ordenar a lista de categorias em ordem alfabética
 const ordemAlfabetica = (elementosDoSelect) => {
@@ -69,8 +103,10 @@ document
   produtoCell.textContent = produto;
   quantidadeCell.textContent = quantidade;
   categoriaCell.textContent = categoria;
-  editCell.innerHTML = `<button>Editar</button>`;
+  editCell.innerHTML = `<button onclick="editarLinhaSelecionada(${id})">Editar</button>`;
   deleteCell.innerHTML = `<button onclick="deletar(${id})">Deletar</button>`;
+
+  transferirLinhaSelecionada();
 
   // Limpando o formulário após adicionar o produto
   document.getElementById("supermarketForm").reset();
