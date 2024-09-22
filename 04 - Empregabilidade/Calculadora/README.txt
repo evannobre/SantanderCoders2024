@@ -1,0 +1,1 @@
+Fazer uma calculadora, organizando os commits por funcionalidade
