@@ -8,12 +8,18 @@ const multiplicarNumeros = (a, b) => a * b;
 const dividirNumeros = (a, b) => a / b;
 
 switch(operacao) {
-    case '1':
-        return somarNumeros(numeroA, numeroB);
-    case '2':
-        return subtrairNumeros(numeroA, numeroB);
-    case '3':
-        return multiplicarNumeros(numeroA, numeroB);
-    case '4':
-        return dividirNumeros(numeroA, numeroB);
+    case "1":
+        alert("O resultado é: " + somarNumeros(numeroA, numeroB));
+        break;
+    case "2":
+        alert("O resultado é: " + subtrairNumeros(numeroA, numeroB));
+        break;
+    case "3":
+        alert("O resultado é: " + multiplicarNumeros(numeroA, numeroB));
+        break;
+    case "4":
+        alert("O resultado é: " + dividirNumeros(numeroA, numeroB));
+        break;
+    default:
+        alert("Operação inválida!")
 }
